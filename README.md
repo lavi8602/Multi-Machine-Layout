@@ -18,7 +18,7 @@ A **hardware-based plug-and-play solution** that monitors multiple CNC machines 
 
 ---
 
-## 📊 OEE Metrics Captured
+## OEE Metrics Captured
 
 | Metric | Macro Variable | Method |
 |--------|---------------|--------|
