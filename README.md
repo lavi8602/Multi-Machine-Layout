@@ -18,7 +18,7 @@ A **hardware-based plug-and-play solution** that monitors multiple CNC machines 
 
 ---
 
-## 📊 OEE Metrics Captured
+## OEE Metrics Captured
 
 | Metric | Macro Variable | Method |
 |--------|---------------|--------|
@@ -32,7 +32,7 @@ A **hardware-based plug-and-play solution** that monitors multiple CNC machines 
 
 ---
 
-## 🚀 Quick Start (For Implementation Partners)
+## Quick Start (For Implementation Partners)
 
 1. **Hardware:** Raspberry Pi 3/4
 2. **CNC Setup:** Load G-code macros 
@@ -42,7 +42,7 @@ A **hardware-based plug-and-play solution** that monitors multiple CNC machines 
 
 ---
 
-## 📈 Results
+## Results
 
 | Before | After |
 |--------|-------|
