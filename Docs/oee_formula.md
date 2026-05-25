@@ -1,10 +1,9 @@
 
 ---
 
-## 3. `docs/gcode_macro_strategy.md`
+## G‑Code Macro Strategy – No FANUC Library Required
 
 ```markdown
-# G‑Code Macro Strategy – No FANUC Library Required
 
 ## Why This Works
 
