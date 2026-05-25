@@ -1,5 +1,4 @@
 
-
 # System Architecture
 
 ## Data Flow
@@ -23,7 +22,7 @@ flowchart LR
     
     subgraph Cloud["Optional Cloud"]
         DB[(InfluxDB)]
-        [Hostinger cloud]
+        G[Hostinger]
     end
     
     G1 -->|updates| M1
