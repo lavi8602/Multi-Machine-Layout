@@ -26,7 +26,7 @@ flowchart LR
     end
     
     G1 -->|updates| M1
-    M1 -->|RS232 read| S
+    M1 -->|| S
     S --> P
     P -->|JSON via MQTT| MQ
     MQ --> D
