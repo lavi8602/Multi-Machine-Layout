@@ -26,7 +26,7 @@ flowchart LR
     end
     
     G1 -->|updates| M1
-    M1 -->|| S
+    M1 -->|PROFIBUS| S
     S --> P
     P -->|JSON via MQTT| MQ
     MQ --> D
