@@ -23,7 +23,7 @@ flowchart LR
     
     subgraph Cloud["Optional Cloud"]
         DB[(InfluxDB)]
-        G[Grafana]
+        [Hostinger cloud]
     end
     
     G1 -->|updates| M1
