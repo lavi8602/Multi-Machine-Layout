@@ -1,0 +1,75 @@
+Macro	Meaning
+
+#610	Planned quantity
+#611	Ideal cycle time (sec or min)
+#612	Job ID (optional)
+#600	Total produced
+#601	Good parts
+#602	Reject parts
+#603	Actual run time
+#604	Actual cycle time
+
+
+
+script-1: ONE-TIME INITIALIZATION
+
+O9000 (OEE CONTROL MACRO)
+
+(---------------- INITIALIZATION ----------------)
+IF [#699 EQ #612] GOTO 100
+
+#600 = 0    (Total produced)
+#601 = 0    (Good parts)
+#602 = 0    (Reject parts)
+#603 = 0    (Run time)
+#604 = 0    (Cycle time)
+#699 = #612
+
+N100
+(---------------- CYCLE START ----------------)
+#650 = 0    (good parts)
+#651 = 0    (incomplete execution)
+#700 = #3001
+M99
+
+
+script-2: PART COUNTING LOGIC 
+
+O9001 (OEE END MACRO)
+
+#701 = #3001
+#604 = #701 - #700
+#603 = #603 + #604
+
+#651 = 1
+#600 = #600 + 1
+
+IF [#650 EQ 1] GOTO 10
+IF [#651 EQ 0] GOTO 10
+
+#601 = #601 + 1
+GOTO 20
+
+N10
+#602 = #602 + 1
+
+N20
+M99
+
+
+script-3:
+
+O1000 (PRODUCTION PROGRAM – JOB A)
+
+#610 = 100    (Planned qty)
+#611 = 60     (Ideal CT)
+#612 = 101    (Job ID)
+
+M98 P9000    (OEE START)
+
+(================ MACHINING =================)
+
+M5
+
+M98 P9001    (OEE END)
+M30
